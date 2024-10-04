@@ -1,0 +1,111 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <LinearGradientBrush x:Key="MenuBorderColor" StartPoint="0,0" EndPoint="1,1">
+        <GradientStop Offset="0.0" Color="#7f00d4"/>
+        <GradientStop Offset="1.0" Color="#9d4efc"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="MenuButtonColor_Normal" StartPoint="0,0" EndPoint="1,1">
+        <GradientStop Offset="0.0" Color="#aa6ff2"/>
+        <GradientStop Offset="1.0" Color="#8909de"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="MenuButtonColor_MouseOver" StartPoint="0,0" EndPoint="1,1">
+        <GradientStop Offset="0.0" Color="#8909de"/>
+        <GradientStop Offset="1.0" Color="#aa6ff2"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="MenuButtonColor_Clicked" StartPoint="0,0" EndPoint="1,1">
+        <GradientStop Offset="0.0" Color="#8744ab"/>
+        <GradientStop Offset="1.0" Color="#300091"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush StartPoint="0,0" 
+                 EndPoint="0,1"
+                 x:Key="BORDER_BACKGROUND_GRADIENT">
+        <GradientStop Color="#bdd3ff" Offset="0.0"/>
+        <GradientStop Color="#0b8be0" Offset="1.0"/>
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="API_BORDER_BACKGROUND" Color="#F4D8FF"/>
+
+    <SolidColorBrush x:Key="TEXTBLOCK_FOREGROUND" Color="#300091"/>
+
+    <SolidColorBrush x:Key="TEXTBOX_BORDERBRUSH" Color="#8909de"/>
+
+    <SolidColorBrush x:Key="MONITOR_TRUE_BORDERBRUSH" Color="#36f58f"/>
+
+    <SolidColorBrush x:Key="MONITOR_FALSE_BORDERBRUSH" Color="#949494"/>
+
+    <!--Button Colors-->
+    <!--Control colors.-->
+    <Color x:Key="WindowColor">#FFE8EDF9</Color>
+    <Color x:Key="ContentAreaColorLight">#FFDB80FF</Color>
+    <Color x:Key="ContentAreaColorDark">#FFBC29F6</Color>
+
+    <Color x:Key="DisabledControlLightColor">#FFE8EDF9</Color>
+    <Color x:Key="DisabledControlDarkColor">#FFC5CBF9</Color>
+    <Color x:Key="DisabledForegroundColor">#FF888888</Color>
+
+    <Color x:Key="SelectedBackgroundColor">#FFC5CBF9</Color>
+    <Color x:Key="SelectedUnfocusedColor">#FFDDDDDD</Color>
+
+    <Color x:Key="ControlLightColor">White</Color>
+    <Color x:Key="ControlMediumColor">#DB80FF</Color>
+    <Color x:Key="ControlDarkColor">#9A09D3</Color>
+
+    <Color x:Key="ControlMouseOverColor">#BC29F6</Color>
+    <Color x:Key="ControlPressedColor">#9A09D3</Color>
+
+
+    <Color x:Key="GlyphColor">#FFBC29F6</Color>
+    <Color x:Key="GlyphMouseOver">sc#1, 0.004391443, 0.002428215, 0.242281124</Color>
+
+    <!--Border colors-->
+    <Color x:Key="BorderLightColor">#DB80FF</Color>
+    <Color x:Key="BorderMediumColor">#FFBC29F6</Color>
+    <Color x:Key="BorderDarkColor">#9A09D3</Color>
+
+    <Color x:Key="PressedBorderLightColor">#FF888888</Color>
+    <Color x:Key="PressedBorderDarkColor">#FF444444</Color>
+
+    <Color x:Key="DisabledBorderLightColor">#FFAAAAAA</Color>
+    <Color x:Key="DisabledBorderDarkColor">#FF888888</Color>
+
+    <Color x:Key="DefaultBorderBrushDarkColor">Black</Color>
+
+    <!--Control-specific resources.-->
+    <Color x:Key="HeaderTopColor">#FFC5CBF9</Color>
+    <Color x:Key="DatagridCurrentCellBorderColor">#9A09D3</Color>
+    <Color x:Key="SliderTrackDarkColor">#FFC5CBF9</Color>
+
+    <Color x:Key="NavButtonFrameColor">#FF3843C4</Color>
+
+    <LinearGradientBrush x:Key="MenuPopupBrush"
+                 EndPoint="0.5,1"
+                 StartPoint="0.5,0">
+        <GradientStop Color="{DynamicResource ControlLightColor}"
+            Offset="0" />
+        <GradientStop Color="{DynamicResource ControlMediumColor}"
+            Offset="0.5" />
+        <GradientStop Color="{DynamicResource ControlLightColor}"
+            Offset="1" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ProgressBarIndicatorAnimatedFill"
+                 StartPoint="0,0"
+                 EndPoint="1,0">
+        <LinearGradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="#000000FF"
+                Offset="0" />
+                <GradientStop Color="#600000FF"
+                Offset="0.4" />
+                <GradientStop Color="#600000FF"
+                Offset="0.6" />
+                <GradientStop Color="#000000FF"
+                Offset="1" />
+            </GradientStopCollection>
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+</ResourceDictionary>
