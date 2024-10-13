@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JjhKiosk.Support.ControlBase;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,16 +14,13 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace JjhKiosk.Title.Views
+namespace JjhKiosk.Title.UI.Views
 {
-    /// <summary>
-    /// Interaction logic for ViewA.xaml
-    /// </summary>
-    public partial class ViewA : UserControl
+    public class BannerControl2 : ContentControlBase
     {
-        public ViewA()
+        static BannerControl2()
         {
-            InitializeComponent();
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(BannerControl2), new FrameworkPropertyMetadata(typeof(BannerControl2)));
         }
     }
 }

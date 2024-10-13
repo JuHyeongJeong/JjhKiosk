@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace JjhKiosk.Main.Views
+namespace JjhKiosk.Login.Views
 {
     /// <summary>
-    /// Main.xaml에 대한 상호 작용 논리
+    /// Interaction logic for ViewA.xaml
     /// </summary>
-    public partial class Main : UserControl
+    public partial class LoginView : UserControl
     {
-        public Main()
+        public LoginView()
         {
             InitializeComponent();
         }

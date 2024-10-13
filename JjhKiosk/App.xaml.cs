@@ -1,8 +1,15 @@
-﻿using JjhKiosk.Title;
+﻿using JjhKiosk.DB.Server.EF.Core.Context;
+using JjhKiosk.DB.Server.EF.Core.Infrastructure.Reverse;
+using JjhKiosk.Login.ViewModels;
+using JjhKiosk.Login.Views;
+using JjhKiosk.Main;
+using JjhKiosk.Main.Views;
+using JjhKiosk.MainWindow;
+using JjhKiosk.MainWindow.Views;
+using JjhKiosk.Title;
+using JjhKiosk.Title.UI.Views;
+using JjhKiosk.Title.ViewModels;
 using Microsoft.Extensions.Configuration;
-using System.ComponentModel;
-using System.Configuration;
-using System.Data;
 using System.Windows;
 
 namespace JjhKiosk
@@ -22,23 +29,36 @@ namespace JjhKiosk
         }
         protected override Window CreateShell()
         {
-            return Container.Resolve<JjhKiosk.Main.Views.Main>();
+            //var mainWindow = Container.Resolve<JjhKiosk.Main.Views.Main>();
+            var mainWindow = Container.Resolve<JjhKiosk.MainWindow.Views.MainWindow>();
+            mainWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            return mainWindow;
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterInstance<IConfiguration>(_config);
+            containerRegistry.RegisterSingleton<JjhKioskDbContext, MySqlContext>();
+            containerRegistry.RegisterForNavigation<LoginView>("LoginView");
+            containerRegistry.RegisterForNavigation<JjhKiosk.Main.Views.Main>("MainView");
+            containerRegistry.RegisterForNavigation<BannerView>("TitleView");
 
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
+            moduleCatalog.AddModule<MainWindowModule>();
+            moduleCatalog.AddModule<MainModule>();
             moduleCatalog.AddModule<TitleModule>();
         }
 
         protected override void ConfigureViewModelLocator()
         {
             base.ConfigureViewModelLocator();
+            ViewModelLocationProvider.Register<BannerView, BannerViewModel>();
+            ViewModelLocationProvider.Register<LoginView, LoginViewModel>();
+            ViewModelLocationProvider.Register<BannerControl1, BannerControl1ViewModel>();
+            ViewModelLocationProvider.Register<BannerControl2, BannerControl2ViewModel>();
         }
     }
 

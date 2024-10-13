@@ -4,11 +4,10 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.2" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
     <PackageReference Include="Prism.Wpf" Version="9.0.537" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\JjhKiosk.Resource\JjhKiosk.Resource.csproj" />
-    <ProjectReference Include="..\JjhKiosk.Support\JjhKiosk.Support.csproj" />
+    <ProjectReference Include="..\JjhKiosk.DB.Server.EF.Core\JjhKiosk.DB.Server.EF.Core.csproj" />
   </ItemGroup>
 </Project>

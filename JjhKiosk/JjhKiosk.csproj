@@ -21,9 +21,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\JjhKiosk.DB.Server.EF.Core\JjhKiosk.DB.Server.EF.Core.csproj" />
+    <ProjectReference Include="..\JjhKiosk.Login\JjhKiosk.Login.csproj" />
+    <ProjectReference Include="..\JjhKiosk.MainWindow\JjhKiosk.MainWindow.csproj" />
     <ProjectReference Include="..\JjhKiosk.Main\JjhKiosk.Main.csproj" />
+    <ProjectReference Include="..\JjhKiosk.Resource\JjhKiosk.Resource.csproj" />
     <ProjectReference Include="..\JjhKiosk.Support\JjhKiosk.Support.csproj" />
     <ProjectReference Include="..\JjhKiosk.Title\JjhKiosk.Title.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

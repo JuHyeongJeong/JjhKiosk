@@ -1,0 +1,8 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:JjhKiosk.Support">
+    <ResourceDictionary.MergedDictionaries>
+        <!--<ResourceDictionary Source="JjhKiosk.Support;component/Themes/Controls/ControlSlider.xaml"/>-->
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
