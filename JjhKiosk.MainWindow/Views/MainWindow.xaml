@@ -7,7 +7,8 @@
         Background="Transparent"
         WindowStyle="None"
         WindowStartupLocation="CenterOwner"
-        prism:ViewModelLocator.AutoWireViewModel="True">
+        prism:ViewModelLocator.AutoWireViewModel="True"
+>
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="0"
               ResizeBorderThickness="5"/>

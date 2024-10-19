@@ -2,10 +2,10 @@
 using JjhKiosk.DB.Server.EF.Core.Infrastructure.Reverse;
 using JjhKiosk.Login.ViewModels;
 using JjhKiosk.Login.Views;
-using JjhKiosk.Main;
-using JjhKiosk.Main.Views;
 using JjhKiosk.MainWindow;
 using JjhKiosk.MainWindow.Views;
+using JjhKiosk.Menu;
+using JjhKiosk.Menu.Views;
 using JjhKiosk.Title;
 using JjhKiosk.Title.UI.Views;
 using JjhKiosk.Title.ViewModels;
@@ -40,16 +40,16 @@ namespace JjhKiosk
             containerRegistry.RegisterInstance<IConfiguration>(_config);
             containerRegistry.RegisterSingleton<JjhKioskDbContext, MySqlContext>();
             containerRegistry.RegisterForNavigation<LoginView>("LoginView");
-            containerRegistry.RegisterForNavigation<JjhKiosk.Main.Views.Main>("MainView");
-            containerRegistry.RegisterForNavigation<BannerView>("TitleView");
+            containerRegistry.RegisterForNavigation<MenuView>("MenuView");
+            containerRegistry.RegisterForNavigation<BannerView>("BannerView");
 
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
             moduleCatalog.AddModule<MainWindowModule>();
-            moduleCatalog.AddModule<MainModule>();
             moduleCatalog.AddModule<TitleModule>();
+            moduleCatalog.AddModule<MenuViewModule>();
         }
 
         protected override void ConfigureViewModelLocator()

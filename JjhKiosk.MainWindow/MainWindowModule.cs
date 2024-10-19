@@ -1,5 +1,4 @@
 ﻿using JjhKiosk.Login.Views;
-using JjhKiosk.Main.Views;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Navigation.Regions;

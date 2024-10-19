@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JjhKiosk.Main
+namespace JjhKiosk.Menu
 {
-    public class MainModule : IModule
+    public class MenuViewModule : IModule
     {
         public void OnInitialized(IContainerProvider containerProvider)
         {
-            var regionManager = containerProvider.Resolve<JjhKiosk.Main.Views.Main>();
+
         }
 
         public void RegisterTypes(IContainerRegistry containerRegistry)

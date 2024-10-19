@@ -38,6 +38,8 @@
     <SolidColorBrush x:Key="MONITOR_FALSE_BORDERBRUSH" Color="#949494"/>
 
     <!--Button Colors-->
+    <SolidColorBrush x:Key="LoginButtonBrush">#FFA500</SolidColorBrush>
+    
     <!--Control colors.-->
     <Color x:Key="WindowColor">#FFE8EDF9</Color>
     <Color x:Key="ContentAreaColorLight">#FFDB80FF</Color>

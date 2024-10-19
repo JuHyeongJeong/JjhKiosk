@@ -5,7 +5,7 @@ VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JjhKiosk", "JjhKiosk.csproj", "{9F1E1719-D8F6-4D8D-8BF0-25EB8072149A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JjhKiosk.Main", "..\JjhKiosk.Main\JjhKiosk.Main.csproj", "{7ADE2007-2A1B-41DF-9F61-381B6B8CB910}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JjhKiosk.Menu", "..\JjhKiosk.Main\JjhKiosk.Menu.csproj", "{7ADE2007-2A1B-41DF-9F61-381B6B8CB910}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JjhKiosk.Support", "..\JjhKiosk.Support\JjhKiosk.Support.csproj", "{FF1927FA-58A7-49CA-A67D-5C1F82AB2556}"
 EndProject
@@ -19,13 +19,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LIB", "LIB", "{727184E9-636
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{8AB3B6F1-1FCB-4D5A-B755-DE5BF243BD34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JjhKiosk.Login", "..\JjhKiosk.Login\JjhKiosk.Login.csproj", "{0A032163-48AE-4539-91BE-21864971D681}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JjhKiosk.Login", "..\JjhKiosk.Login\JjhKiosk.Login.csproj", "{0A032163-48AE-4539-91BE-21864971D681}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JjhKiosk.MainWindow", "..\JjhKiosk.MainWindow\JjhKiosk.MainWindow.csproj", "{00AA29AB-D793-46B7-83A1-0938C8D29E1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JjhKiosk.MainWindow", "..\JjhKiosk.MainWindow\JjhKiosk.MainWindow.csproj", "{00AA29AB-D793-46B7-83A1-0938C8D29E1A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utility", "Utility", "{AF4DB11A-EEEC-4B61-9F87-FAC76AD5ABB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordHashGenerator", "..\PasswordHashGenerator\PasswordHashGenerator.csproj", "{735E438E-B3DC-405D-95E6-5DF2C5CA8EAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PasswordHashGenerator", "..\PasswordHashGenerator\PasswordHashGenerator.csproj", "{735E438E-B3DC-405D-95E6-5DF2C5CA8EAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
