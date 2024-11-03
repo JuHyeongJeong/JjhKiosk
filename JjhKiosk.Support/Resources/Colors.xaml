@@ -37,6 +37,8 @@
 
     <SolidColorBrush x:Key="MONITOR_FALSE_BORDERBRUSH" Color="#949494"/>
 
+    <SolidColorBrush x:Key="STANDBY_BUTTON_CORNER_FONT" Color="#0080E8"/>
+
     <!--Button Colors-->
     <SolidColorBrush x:Key="LoginButtonBrush">#FFA500</SolidColorBrush>
     

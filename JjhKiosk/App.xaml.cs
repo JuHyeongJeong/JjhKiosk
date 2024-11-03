@@ -6,6 +6,7 @@ using JjhKiosk.MainWindow;
 using JjhKiosk.MainWindow.Views;
 using JjhKiosk.Menu;
 using JjhKiosk.Menu.Views;
+using JjhKiosk.Standby.Views;
 using JjhKiosk.Title;
 using JjhKiosk.Title.UI.Views;
 using JjhKiosk.Title.ViewModels;
@@ -41,6 +42,7 @@ namespace JjhKiosk
             containerRegistry.RegisterSingleton<JjhKioskDbContext, MySqlContext>();
             containerRegistry.RegisterForNavigation<LoginView>("LoginView");
             containerRegistry.RegisterForNavigation<MenuView>("MenuView");
+            containerRegistry.RegisterForNavigation<StandbyView>("StandbyView");
             containerRegistry.RegisterForNavigation<BannerView>("BannerView");
 
         }
@@ -57,8 +59,10 @@ namespace JjhKiosk
             base.ConfigureViewModelLocator();
             ViewModelLocationProvider.Register<BannerView, BannerViewModel>();
             ViewModelLocationProvider.Register<LoginView, LoginViewModel>();
+            ViewModelLocationProvider.Register<StandbyView, LoginViewModel>();
             ViewModelLocationProvider.Register<BannerControl1, BannerControl1ViewModel>();
             ViewModelLocationProvider.Register<BannerControl2, BannerControl2ViewModel>();
+            ViewModelLocationProvider.Register<BannerControl3, BannerControl3ViewModel>();
         }
     }
 

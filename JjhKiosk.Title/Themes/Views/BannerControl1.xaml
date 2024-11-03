@@ -6,7 +6,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type view:BannerControl1}">
                     <Grid>
-                        <Image Source="/JjhKiosk.Resource;component/Banners/horizontal_split_top.png" Stretch="Fill"
+                        <Image Source="/JjhKiosk.Resource;component/Banners/horizontal_split_top.jpeg" Stretch="Fill"
                                HorizontalAlignment="Stretch"
                                VerticalAlignment="Stretch"/>
                     </Grid>

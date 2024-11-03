@@ -8,7 +8,7 @@
     <PackageReference Include="Prism.Wpf" Version="9.0.537" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\JjhKiosk.Login\JjhKiosk.Login.csproj" />
-    <ProjectReference Include="..\JjhKiosk.Main\JjhKiosk.Menu.csproj" />
+    <ProjectReference Include="..\JjhKiosk.Resource\JjhKiosk.Resource.csproj" />
+    <ProjectReference Include="..\JjhKiosk.Support\JjhKiosk.Support.csproj" />
   </ItemGroup>
 </Project>

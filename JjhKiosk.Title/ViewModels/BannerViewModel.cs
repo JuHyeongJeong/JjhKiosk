@@ -47,6 +47,10 @@ namespace JjhKiosk.Title.ViewModels
             {
                 return (ContentControlBase)ContainerProvider.Resolve<BannerControl2>();
             }
+            else if(CurrentView is BannerControl2)
+            {
+                return (ContentControlBase)ContainerProvider.Resolve<BannerControl3>();
+            }
             else
             {
                 return (ContentControlBase)ContainerProvider.Resolve<BannerControl1>();

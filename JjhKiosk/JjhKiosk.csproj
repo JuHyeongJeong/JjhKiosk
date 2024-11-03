@@ -26,6 +26,7 @@
     <ProjectReference Include="..\JjhKiosk.MainWindow\JjhKiosk.MainWindow.csproj" />
     <ProjectReference Include="..\JjhKiosk.Main\JjhKiosk.Menu.csproj" />
     <ProjectReference Include="..\JjhKiosk.Resource\JjhKiosk.Resource.csproj" />
+    <ProjectReference Include="..\JjhKiosk.Standby\JjhKiosk.Standby.csproj" />
     <ProjectReference Include="..\JjhKiosk.Support\JjhKiosk.Support.csproj" />
     <ProjectReference Include="..\JjhKiosk.Title\JjhKiosk.Title.csproj" />
   </ItemGroup>

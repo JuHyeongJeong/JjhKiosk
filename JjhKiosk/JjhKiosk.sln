@@ -27,6 +27,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utility", "Utility", "{AF4D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PasswordHashGenerator", "..\PasswordHashGenerator\PasswordHashGenerator.csproj", "{735E438E-B3DC-405D-95E6-5DF2C5CA8EAC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JjhKiosk.Standby", "..\JjhKiosk.Standby\JjhKiosk.Standby.csproj", "{59605FCA-7961-4CF4-9C35-0FE8178411A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{735E438E-B3DC-405D-95E6-5DF2C5CA8EAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{735E438E-B3DC-405D-95E6-5DF2C5CA8EAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{735E438E-B3DC-405D-95E6-5DF2C5CA8EAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59605FCA-7961-4CF4-9C35-0FE8178411A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59605FCA-7961-4CF4-9C35-0FE8178411A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59605FCA-7961-4CF4-9C35-0FE8178411A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59605FCA-7961-4CF4-9C35-0FE8178411A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,6 +89,7 @@ Global
 		{0A032163-48AE-4539-91BE-21864971D681} = {8AB3B6F1-1FCB-4D5A-B755-DE5BF243BD34}
 		{00AA29AB-D793-46B7-83A1-0938C8D29E1A} = {8AB3B6F1-1FCB-4D5A-B755-DE5BF243BD34}
 		{735E438E-B3DC-405D-95E6-5DF2C5CA8EAC} = {AF4DB11A-EEEC-4B61-9F87-FAC76AD5ABB2}
+		{59605FCA-7961-4CF4-9C35-0FE8178411A4} = {8AB3B6F1-1FCB-4D5A-B755-DE5BF243BD34}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {94B1771F-F210-4295-80D3-0117772F2400}

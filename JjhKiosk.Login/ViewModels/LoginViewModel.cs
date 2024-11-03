@@ -28,7 +28,7 @@ namespace JjhKiosk.Login.ViewModels
         private void Test()
         {
             var a = _dbContext.KioskAccounts.ToList().FirstOrDefault() ;
-            _regionManager.RequestNavigate("ContentRegion", "MenuView");
+            _regionManager.RequestNavigate("ContentRegion", "StandbyView");
         }
     }
 }

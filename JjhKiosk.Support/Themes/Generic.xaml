@@ -3,6 +3,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:JjhKiosk.Support">
     <ResourceDictionary.MergedDictionaries>
-        <!--<ResourceDictionary Source="JjhKiosk.Support;component/Themes/Controls/ControlSlider.xaml"/>-->
+        <ResourceDictionary Source="JjhKiosk.Support;component/Themes/Controls/MenuListBox.xaml"/>
+        <ResourceDictionary Source="JjhKiosk.Support;component/Themes/Controls/MenuListBoxItem.xaml"/>
+        <ResourceDictionary Source="JjhKiosk.Support;component/Themes/Controls/StandbyButton.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
