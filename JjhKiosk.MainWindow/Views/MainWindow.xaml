@@ -3,32 +3,24 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:prism="http://prismlibrary.com/"          
         AllowsTransparency="True"  
-        Title="Main" Height="1200" Width="1800"
+        Title="Main" Height="1080" Width="900"
         Background="Transparent"
         WindowStyle="None"
+        ResizeMode="NoResize"
         WindowStartupLocation="CenterOwner"
         prism:ViewModelLocator.AutoWireViewModel="True"
 >
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="0"
-              ResizeBorderThickness="5"/>
+              ResizeBorderThickness="0"/>
     </WindowChrome.WindowChrome>
     <Border Background="White"
          Margin="0"
          CornerRadius="20">
-        <Border.OpacityMask>
-            <VisualBrush>
-                <VisualBrush.Visual>
-                    <Border Background="Black"
-                     SnapsToDevicePixels="True"
-                     CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource AncestorType=Border}}"
-                     Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Border}}"
-                     Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Border}}"
-                     />
-                </VisualBrush.Visual>
-            </VisualBrush>
-        </Border.OpacityMask>
-        <Grid>
+        <Border.Clip>
+            <RectangleGeometry RadiusX="20" RadiusY="20" Rect="0,0,900,1080"/>
+        </Border.Clip>
+        <Grid RenderOptions.BitmapScalingMode="HighQuality">
             <ContentControl prism:RegionManager.RegionName="ContentRegion"/>
         </Grid>
     </Border>

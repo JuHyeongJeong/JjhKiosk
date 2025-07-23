@@ -16,7 +16,6 @@ public partial class JjhKioskDbContext : DbContext
         _configuration = configuration;
     }
 
-
     public virtual DbSet<KioskAccount> KioskAccounts { get; set; }
 
     public virtual DbSet<KioskList> KioskLists { get; set; }
@@ -26,6 +25,8 @@ public partial class JjhKioskDbContext : DbContext
     public virtual DbSet<KioskMenuList> KioskMenuLists { get; set; }
 
     public virtual DbSet<KioskMenuOptionGroup> KioskMenuOptionGroups { get; set; }
+
+    public virtual DbSet<KioskMenuOptionLinker> KioskMenuOptionLinkers { get; set; }
 
     public virtual DbSet<KioskMenuOptionMember> KioskMenuOptionMembers { get; set; }
 
@@ -135,29 +136,31 @@ public partial class JjhKioskDbContext : DbContext
 
             entity.ToTable("Kiosk_MenuList");
 
-            entity.HasIndex(e => e.MenuTypeId, "Kiosk_MenuList_Kiosk_MenuType_FK");
+            entity.HasIndex(e => e.MenuCategoryId, "Kiosk_MenuList_Kiosk_MenuCategory_FK");
 
-            entity.HasIndex(e => e.StoreId, "Kiosk_MenuList_Kiosk_StoreList_FK");
+            entity.HasIndex(e => e.MenuTypeId, "Kiosk_MenuList_Kiosk_MenuType_FK");
 
             entity.Property(e => e.MenuId)
                 .HasColumnType("int(10) unsigned")
                 .HasColumnName("MenuID");
+            entity.Property(e => e.ImagePath).HasMaxLength(100);
+            entity.Property(e => e.MenuCategoryId)
+                .HasColumnType("int(10) unsigned")
+                .HasColumnName("MenuCategoryID");
             entity.Property(e => e.MenuName).HasMaxLength(50);
             entity.Property(e => e.MenuTypeId)
                 .HasColumnType("int(10) unsigned")
                 .HasColumnName("MenuTypeID");
             entity.Property(e => e.Price).HasColumnType("int(10) unsigned");
-            entity.Property(e => e.StoreId)
-                .HasColumnType("int(10) unsigned")
-                .HasColumnName("StoreID");
+
+            entity.HasOne(d => d.MenuCategory).WithMany(p => p.KioskMenuLists)
+                .HasForeignKey(d => d.MenuCategoryId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("Kiosk_MenuList_Kiosk_MenuCategory_FK");
 
             entity.HasOne(d => d.MenuType).WithMany(p => p.KioskMenuLists)
                 .HasForeignKey(d => d.MenuTypeId)
                 .HasConstraintName("Kiosk_MenuList_Kiosk_MenuType_FK");
-
-            entity.HasOne(d => d.Store).WithMany(p => p.KioskMenuLists)
-                .HasForeignKey(d => d.StoreId)
-                .HasConstraintName("Kiosk_MenuList_Kiosk_StoreList_FK");
         });
 
         modelBuilder.Entity<KioskMenuOptionGroup>(entity =>
@@ -191,27 +194,53 @@ public partial class JjhKioskDbContext : DbContext
                 .HasConstraintName("Kiosk_MenuOptionGroup_Kiosk_MenuOptionType_FK");
         });
 
+        modelBuilder.Entity<KioskMenuOptionLinker>(entity =>
+        {
+            entity.HasKey(e => e.LinkerId).HasName("PRIMARY");
+
+            entity.ToTable("Kiosk_MenuOptionLinker");
+
+            entity.HasIndex(e => e.OptionGroupId, "KioskMenuOptionLinker_Kiosk_MenuOptionGroup_FK");
+
+            entity.HasIndex(e => e.OptionMemberId, "KioskMenuOptionLinker_Kiosk_MenuOptionMember_FK");
+
+            entity.HasIndex(e => e.OptionTypeId, "KioskMenuOptionLinker_Kiosk_MenuOptionType_FK");
+
+            entity.Property(e => e.LinkerId).HasColumnType("int(10) unsigned");
+            entity.Property(e => e.OptionGroupId)
+                .HasColumnType("int(10) unsigned")
+                .HasColumnName("OptionGroupID");
+            entity.Property(e => e.OptionMemberId)
+                .HasColumnType("int(10) unsigned")
+                .HasColumnName("OptionMemberID");
+            entity.Property(e => e.OptionTypeId)
+                .HasColumnType("int(10) unsigned")
+                .HasColumnName("OptionTypeID");
+
+            entity.HasOne(d => d.OptionGroup).WithMany(p => p.KioskMenuOptionLinkers)
+                .HasForeignKey(d => d.OptionGroupId)
+                .HasConstraintName("KioskMenuOptionLinker_Kiosk_MenuOptionGroup_FK");
+
+            entity.HasOne(d => d.OptionMember).WithMany(p => p.KioskMenuOptionLinkers)
+                .HasForeignKey(d => d.OptionMemberId)
+                .HasConstraintName("KioskMenuOptionLinker_Kiosk_MenuOptionMember_FK");
+
+            entity.HasOne(d => d.OptionType).WithMany(p => p.KioskMenuOptionLinkers)
+                .HasForeignKey(d => d.OptionTypeId)
+                .HasConstraintName("KioskMenuOptionLinker_Kiosk_MenuOptionType_FK");
+        });
+
         modelBuilder.Entity<KioskMenuOptionMember>(entity =>
         {
             entity.HasKey(e => e.OptionMemberId).HasName("PRIMARY");
 
             entity.ToTable("Kiosk_MenuOptionMember");
 
-            entity.HasIndex(e => e.OptionGroupId, "Kiosk_MenuOptionMember_Kiosk_MenuOptionGroup_FK");
-
             entity.Property(e => e.OptionMemberId)
                 .HasColumnType("int(10) unsigned")
                 .HasColumnName("OptionMemberID");
-            entity.Property(e => e.OptionGroupId)
-                .HasColumnType("int(10) unsigned")
-                .HasColumnName("OptionGroupID");
             entity.Property(e => e.OptionMemberName).HasMaxLength(20);
             entity.Property(e => e.OptionMemberPrice).HasColumnType("int(10) unsigned");
-
-            entity.HasOne(d => d.OptionGroup).WithMany(p => p.KioskMenuOptionMembers)
-                .HasForeignKey(d => d.OptionGroupId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("Kiosk_MenuOptionMember_Kiosk_MenuOptionGroup_FK");
         });
 
         modelBuilder.Entity<KioskMenuOptionType>(entity =>

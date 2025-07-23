@@ -12,4 +12,6 @@ public partial class KioskMenuOptionType
     public string? Description { get; set; }
 
     public virtual ICollection<KioskMenuOptionGroup> KioskMenuOptionGroups { get; set; } = new List<KioskMenuOptionGroup>();
+
+    public virtual ICollection<KioskMenuOptionLinker> KioskMenuOptionLinkers { get; set; } = new List<KioskMenuOptionLinker>();
 }

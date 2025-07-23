@@ -22,10 +22,10 @@ namespace JjhKiosk.Support.Controls
             DefaultStyleKeyProperty.OverrideMetadata(typeof(MenuListBox), new FrameworkPropertyMetadata(typeof(MenuListBox)));
         }
 
+
         protected override DependencyObject GetContainerForItemOverride()
         {
             return new MenuListBoxItem();
         }
-
     }
 }

@@ -1,6 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:ctrl="clr-namespace:JjhKiosk.Support.Controls">
+                    xmlns:ctrl="clr-namespace:JjhKiosk.Support.Controls"
+                    xmlns:cvt="clr-namespace:JjhKiosk.Support.Converters"
+                    xmlns:cc="clr-namespace:JjhKiosk.Support.ControlBase">
     <Style TargetType="{x:Type ctrl:MenuListBox}">
         <Setter Property="Template">
             <Setter.Value>
@@ -8,9 +10,14 @@
                     <Border BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             Background="{TemplateBinding Background}">
-                        <ScrollViewer Focusable="false" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" PanningMode="VerticalOnly"  PanningDeceleration="0.001">
-                            <WrapPanel IsItemsHost="True" Orientation="Horizontal"/>
-                        </ScrollViewer>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <ScrollViewer Focusable="false" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Disabled" Grid.Row="0">
+                                <WrapPanel IsItemsHost="True" Orientation="Horizontal"/>
+                            </ScrollViewer>
+                        </Grid>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>

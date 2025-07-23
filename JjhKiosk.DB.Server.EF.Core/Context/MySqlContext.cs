@@ -23,5 +23,19 @@ namespace JjhKiosk.DB.Server.EF.Core.Context
                 optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
             }
         }
+
+        public static JjhKioskDbContext CreateJjhKioskContext(IConfiguration configuration)
+        {
+            string dbProvider = configuration.GetSection("DbProvider")?.Value ?? "SqlServer";
+
+            //if (dbProvider.Equals("MySql", StringComparison.OrdinalIgnoreCase))
+            //{
+                return new MySqlContext(configuration);
+            //}
+            //else
+            //{
+            //    return new MsSqlContext(configuration);
+            //}
+        }
     }
 }

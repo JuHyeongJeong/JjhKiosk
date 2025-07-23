@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using JjhKiosk.Support.Enum;
+using JjhKiosk.Support.Interface;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace JjhKiosk.Support.Model
 {
-    public partial class MenuOptionItem : ObservableObject
+    public partial class MenuOptionItem : ObservableObject, IMenuOptionItem
     {
 		private string optionName;
 
@@ -18,7 +19,7 @@ namespace JjhKiosk.Support.Model
 		private OptionType optionType;
 
         [ObservableProperty]
-        public ObservableCollection<OptionSelection> optionSelections;
+        private ObservableCollection<IOptionSelection> optionSelections;
 
 
         public string OptionName
@@ -39,6 +40,8 @@ namespace JjhKiosk.Support.Model
             get { return optionType; }
             set { optionType = value; }
         }
+
+
 
     }
 }

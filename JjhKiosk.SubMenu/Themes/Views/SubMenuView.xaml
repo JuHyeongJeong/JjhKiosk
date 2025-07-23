@@ -1,0 +1,41 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:view="clr-namespace:JjhKiosk.SubMenu.Views"
+                    xmlns:ctrl="clr-namespace:JjhKiosk.Support.Controls;assembly=JjhKiosk.Support">
+    <Style TargetType="{x:Type view:SubMenuView}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type view:SubMenuView}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <ctrl:SubItemListBox ItemsSource="{Binding SelectedItem.OptionSelections}"
+                                             ItemTemplateSelector="{DynamicResource SubOptionTemplateSelector}"/>
+                        <StackPanel Grid.Column="1" 
+                                    Orientation="Horizontal" 
+                                    HorizontalAlignment="Center" 
+                                    VerticalAlignment="Bottom" 
+                                    Margin="0,0,0,0">
+                            <ctrl:OptionCancelButton Width="130" 
+                                                     Height="50" 
+                                                     Command="{Binding CancelCommand}" 
+                                                     Margin="5" 
+                                                     Content="취소"
+                                                     FontSize="20"
+                                                     Cursor="Hand"/>
+                            <ctrl:OptionSelectButton Width="130" 
+                                                     Height="50" 
+                                                     Command="{Binding SelectCommand}" 
+                                                     Margin="5" 
+                                                     Content="선택완료"
+                                                     FontSize="20"
+                                                     Cursor="Hand"/>
+                        </StackPanel>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

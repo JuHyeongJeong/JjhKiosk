@@ -2,7 +2,7 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:prism="http://prismlibrary.com/"        
-             Height="1200" Width="1800"
+             Height="1080" Width="900"
              prism:ViewModelLocator.AutoWireViewModel="True"
              xmlns:ctrl="clr-namespace:JjhKiosk.Support.Controls;assembly=JjhKiosk.Support">
     <Grid Background="White">
@@ -29,10 +29,10 @@
             </Grid.ColumnDefinitions>
 
             <!-- 왼쪽 버튼 -->
-            <ctrl:StandbyButton Grid.Column="1" Content="홀에서 먹을래요"/>
+            <ctrl:StandbyButton Grid.Column="1" Content="홀에서 먹을래요" Command="{Binding TakeTypeSelectionCommand}" CommandParameter="1"/>
 
             <!-- 오른쪽 버튼 -->
-            <ctrl:StandbyButton Grid.Column="2" Content="포장해갈게요"/>
+            <ctrl:StandbyButton Grid.Column="2" Content="포장해갈게요" Command="{Binding TakeTypeSelectionCommand}" CommandParameter="2"/>
         </Grid>
     </Grid>
 </UserControl>

@@ -4,7 +4,21 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Prism.Wpf" Version="9.0.537" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JjhKiosk.DB.Server.EF.Core\JjhKiosk.DB.Server.EF.Core.csproj" />
+    <ProjectReference Include="..\JjhKiosk.Resource\JjhKiosk.Resource.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Themes\Controls\SubItemListBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Controls\SubItemOptionListBoxItem_MultiAdd.xaml">
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
 </Project>

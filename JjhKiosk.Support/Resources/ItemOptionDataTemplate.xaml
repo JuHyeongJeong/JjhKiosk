@@ -1,0 +1,29 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:ctrl="clr-namespace:JjhKiosk.Support.Controls"
+                    xmlns:sel="clr-namespace:JjhKiosk.Support.Selector">
+    <DataTemplate x:Key="MaxOneTemplate">
+        <ctrl:SubItemOptionListBox_MaxOne ItemsSource="{Binding OptionSelections}">
+        </ctrl:SubItemOptionListBox_MaxOne>
+    </DataTemplate>
+    
+    <DataTemplate x:Key="MuiltiSelectionTemplate">
+        <ctrl:SubItemOptionListBox_Multi ItemsSource="{Binding OptionSelections}">
+        </ctrl:SubItemOptionListBox_Multi>
+    </DataTemplate>
+
+    <DataTemplate x:Key="OnlyOneTemplate">
+        <ctrl:SubItemOptionListBox_OnlyOne ItemsSource="{Binding OptionSelections}"/>
+    </DataTemplate>
+
+    <DataTemplate x:Key="MultiAdditionalTemplate">
+        <ctrl:SubItemOptionListBox_MultiAdd ItemsSource="{Binding OptionSelections}">
+        </ctrl:SubItemOptionListBox_MultiAdd>
+    </DataTemplate>
+
+    <sel:MenuOptionTypeSelector x:Key="SubOptionTemplateSelector"
+                                MaxOneTemplate="{StaticResource MaxOneTemplate}"
+                                MultiTemplate="{StaticResource MuiltiSelectionTemplate}"
+                                OnlyOneTemplate="{StaticResource OnlyOneTemplate}"
+                                MultiAddTemplate="{StaticResource MultiAdditionalTemplate}"/>
+</ResourceDictionary>

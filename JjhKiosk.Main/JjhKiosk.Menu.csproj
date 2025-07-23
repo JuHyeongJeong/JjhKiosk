@@ -10,4 +10,7 @@
   <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JjhKiosk.Support\JjhKiosk.Support.csproj" />
+  </ItemGroup>
 </Project>

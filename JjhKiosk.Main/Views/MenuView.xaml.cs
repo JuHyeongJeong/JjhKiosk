@@ -15,10 +15,11 @@ using System.Windows.Shapes;
 
 namespace JjhKiosk.Menu.Views
 {
+    public interface IMenuView{ }
     /// <summary>
     /// Main.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class MenuView : UserControl
+    public partial class MenuView : UserControl, IMenuView
     {
         public MenuView(IRegionManager regionManager)
         {
@@ -27,7 +28,15 @@ namespace JjhKiosk.Menu.Views
 
             RegionManager.SetRegionManager(this, regionManager);
             RegionManager.SetRegionName(TitleRegion, "TitleRegion");
+            RegionManager.SetRegionName(CategoryRegion, "CategoryRegion");
+            //RegionManager.SetRegionName(OptionRegion, "OptionRegion");
+            RegionManager.SetRegionName(ItemListRegion, "ItemListRegion");
+            RegionManager.SetRegionName(OrderRegion, "OrderRegion");
+            RegionManager.SetRegionName(SubMenuRegion, "SubMenuRegion");
             regionManager.RequestNavigate("TitleRegion", "BannerView");
+            regionManager.RequestNavigate("ItemListRegion", "MenuListView");
+            regionManager.RequestNavigate("CategoryRegion", "MenuCategoryView");
+            regionManager.RequestNavigate("SubMenuRegion", "SubMenuView");
         }
     }
 }

@@ -9,8 +9,9 @@ namespace JjhKiosk.Support.Enum
     public enum OptionType
     {
         NONE = 0,
-        RADIO = 1,
-        ADD = 2,
-        HOT_ICE
+        MAX_ONE = 1,
+        MULTI = 2,
+        ONLY_ONE = 3,
+        MULTI_ADD = 4
     }
 }

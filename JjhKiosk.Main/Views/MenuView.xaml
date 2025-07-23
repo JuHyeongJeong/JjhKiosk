@@ -8,7 +8,7 @@
              xmlns:prism="http://prismlibrary.com/" 
              xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              Background="Transparent"
-             Height="1200" Width="1800"
+             Height="1080" Width="900"
              prism:ViewModelLocator.AutoWireViewModel="True" 
         >
     <i:Interaction.Triggers>
@@ -19,26 +19,34 @@
     <Border Background="White"
             Margin="0"
             CornerRadius="20">
-        <Border.OpacityMask>
-            <VisualBrush>
-                <VisualBrush.Visual>
-                    <Border Background="Black"
-                        SnapsToDevicePixels="True"
-                        CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource AncestorType=Border}}"
-                        Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Border}}"
-                        Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Border}}"
-                        />
-                </VisualBrush.Visual>
-            </VisualBrush>
-        </Border.OpacityMask>
-        <Grid>
+        <Border.Clip>
+            <RectangleGeometry RadiusX="20" RadiusY="20" Rect="0,0,900,1080"/>
+        </Border.Clip>
+        <Grid RenderOptions.BitmapScalingMode="HighQuality">
             <Grid.RowDefinitions>
-                <RowDefinition Height="250"/>
                 <RowDefinition Height="150"/>
+                <RowDefinition Height="50"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="200"/>
+                <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
-
+            <Popup Grid.Row="0"
+                   Grid.RowSpan="4"
+                   x:Name="PopupContainer" 
+                   IsOpen="{Binding PopupFlag}" 
+                   Placement="Center" 
+                   StaysOpen="False"
+                   Height="1040"
+                   Width="850"
+                   AllowsTransparency="True">
+                <Border Background="White" 
+                        BorderBrush="Gray" 
+                        BorderThickness="1" 
+                        CornerRadius="10" 
+                        Padding="10"
+                        ClipToBounds="True">
+                    <ContentControl x:Name="SubMenuRegion" prism:RegionManager.RegionName="SubMenuRegion" />
+                </Border>
+            </Popup>
             <DockPanel Grid.Row="0"
                        LastChildFill="True">
                 <ContentControl x:Name="TitleRegion" prism:RegionManager.RegionName="TitleRegion"/>
@@ -46,28 +54,28 @@
             <DockPanel Grid.Row="1"
                        Background="MediumPurple"
                        LastChildFill="True">
-                <ContentControl prism:RegionManager.RegionName="MenuRegion"/>
+                <ContentControl x:Name="CategoryRegion" prism:RegionManager.RegionName="CategoryRegion"/>
             </DockPanel>
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="400"/>
+                    <!--<ColumnDefinition Width="250"/>-->
                 </Grid.ColumnDefinitions>
                 <DockPanel Grid.Column="0"
                            LastChildFill="True">
-                    <ContentControl prism:RegionManager.RegionName="ItemRegion"/>
+                    <ContentControl x:Name="ItemListRegion" prism:RegionManager.RegionName="ItemListRegion"/>
                 </DockPanel>
-                <DockPanel Grid.Column="1"
+                <!--<DockPanel Grid.Column="1"
                            Background="LightBlue"
                             LastChildFill="True">
-                    <ContentControl prism:RegionManager.RegionName="OptionRegion"/>
-                </DockPanel>
+                    <ContentControl x:Name="OptionRegion" prism:RegionManager.RegionName="OptionRegion"/>
+                </DockPanel>-->
             </Grid>
             <DockPanel Grid.Row="3"
                LastChildFill="True"
                        Background="LightCyan"
                        >
-                <ContentControl prism:RegionManager.RegionName="OrderRegion"/>
+                <ContentControl x:Name="OrderRegion"  prism:RegionManager.RegionName="OrderRegion"/>
             </DockPanel>
         </Grid>
     </Border>

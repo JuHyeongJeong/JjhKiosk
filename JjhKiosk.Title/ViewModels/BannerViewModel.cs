@@ -16,7 +16,8 @@ using System.Windows.Threading;
 
 namespace JjhKiosk.Title.ViewModels
 {
-    public partial class BannerViewModel : ObservableObject
+    public interface IBannerViewModel { }
+    public partial class BannerViewModel : ObservableObject, IBannerViewModel
     {
         [ObservableProperty]
         private ContentControlBase _currentView = default!;

@@ -25,8 +25,11 @@
     <ProjectReference Include="..\JjhKiosk.Login\JjhKiosk.Login.csproj" />
     <ProjectReference Include="..\JjhKiosk.MainWindow\JjhKiosk.MainWindow.csproj" />
     <ProjectReference Include="..\JjhKiosk.Main\JjhKiosk.Menu.csproj" />
+    <ProjectReference Include="..\JjhKiosk.MenuCategory\JjhKiosk.MenuCategory.csproj" />
+    <ProjectReference Include="..\JjhKiosk.MenuList\JjhKiosk.MenuList.csproj" />
     <ProjectReference Include="..\JjhKiosk.Resource\JjhKiosk.Resource.csproj" />
     <ProjectReference Include="..\JjhKiosk.Standby\JjhKiosk.Standby.csproj" />
+    <ProjectReference Include="..\JjhKiosk.SubMenu\JjhKiosk.SubMenu.csproj" />
     <ProjectReference Include="..\JjhKiosk.Support\JjhKiosk.Support.csproj" />
     <ProjectReference Include="..\JjhKiosk.Title\JjhKiosk.Title.csproj" />
   </ItemGroup>

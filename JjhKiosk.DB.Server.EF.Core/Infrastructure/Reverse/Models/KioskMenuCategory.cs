@@ -11,5 +11,7 @@ public partial class KioskMenuCategory
 
     public uint? StoreId { get; set; }
 
+    public virtual ICollection<KioskMenuList> KioskMenuLists { get; set; } = new List<KioskMenuList>();
+
     public virtual KioskStoreList? Store { get; set; }
 }

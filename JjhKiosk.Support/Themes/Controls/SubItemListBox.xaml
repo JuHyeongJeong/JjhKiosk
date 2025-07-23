@@ -1,0 +1,49 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:ctrl="clr-namespace:JjhKiosk.Support.Controls"
+                    xmlns:cvt="clr-namespace:JjhKiosk.Support.Converters"
+                    xmlns:cc="clr-namespace:JjhKiosk.Support.ControlBase">
+    <Style TargetType="{x:Type ctrl:SubItemListBox}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ctrl:SubItemListBox}">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="0"
+                            Background="{TemplateBinding Background}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0"
+                                        Orientation="Horizontal">
+                                <Image Source="{Binding SelectedItem.MenuIcon}" 
+                                       Width="100" 
+                                       Height="100" 
+                                       Margin="5" 
+                                       Stretch="Fill"/>
+                                <TextBlock Text="{Binding SelectedItem.Name}"
+                                           FontSize="20"
+                                           FontWeight="Bold"
+                                           VerticalAlignment="Center"/>
+                            </StackPanel>
+                            <Border Grid.Row="1"
+                                    BorderBrush="DarkGray"
+                                    BorderThickness="1">
+                                <ScrollViewer Focusable="false" 
+                                              VerticalScrollBarVisibility="Disabled" 
+                                              HorizontalScrollBarVisibility="Disabled">
+                                    <StackPanel IsItemsHost="True" Orientation="Vertical"/>
+                                </ScrollViewer>
+                            </Border>
+                            
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="BorderBrush" Value="Gray"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Background" Value="White"/>
+    </Style>
+</ResourceDictionary>

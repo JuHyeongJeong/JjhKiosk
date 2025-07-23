@@ -1,0 +1,61 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:view="clr-namespace:JjhKiosk.MenuCategory.Views"
+                    xmlns:cvt="clr-namespace:JjhKiosk.Support.Converters;assembly=JjhKiosk.Support"
+                    xmlns:ctrl="clr-namespace:JjhKiosk.Support.Controls;assembly=JjhKiosk.Support"
+                    xmlns:i="http://schemas.microsoft.com/xaml/behaviors">
+    <Style TargetType="{x:Type view:CategoryListView}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type view:CategoryListView}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="9*"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <ctrl:CategoryListBox Grid.Column="0" 
+                                              ItemsSource="{Binding CurrentItems}"
+                                              SelectedItem="{Binding SelectedCategory}"
+                                              BorderThickness="0">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="SelectionChanged">
+                                    <i:InvokeCommandAction Command="{Binding SelectedItemChangedCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </ctrl:CategoryListBox>
+                        <StackPanel Grid.Column="1" 
+                                    Orientation="Horizontal" 
+                                    HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center" 
+                                    Margin="0,0,0,0">
+                            <ctrl:NextButton x:Name="PreviousButton" 
+                                             Width="40" 
+                                             Height="40" 
+                                             Command="{Binding PreviousPageCommand}" 
+                                             Margin="5" 
+                                             Visibility="{Binding IsPreviousButtonVisible, Converter={cvt:BooleanToVisibilityConverter}}"
+                                             Background="Transparent"
+                                             BorderBrush="Transparent">
+                                <Button.Content>
+                                    <Path Data="M 10 0 L 0 5 L 10 10 Z" Fill="White" Stretch="Uniform" Width="20" Height="20" />
+                                </Button.Content>
+                            </ctrl:NextButton>
+                            <ctrl:NextButton x:Name="NextButton" 
+                                             Width="40" 
+                                             Height="40" 
+                                             Command="{Binding NextPageCommand}" 
+                                             Margin="5" 
+                                             Visibility="{Binding IsNextButtonVisible, Converter={cvt:BooleanToVisibilityConverter}}"
+                                             Background="Transparent"
+                                             BorderBrush="Transparent">
+                                <Button.Content>
+                                    <Path Data="M 0 0 L 10 5 L 0 10 Z" Fill="White" Stretch="Uniform" Width="20" Height="20" />
+                                </Button.Content>
+                            </ctrl:NextButton>
+                        </StackPanel>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

@@ -25,8 +25,6 @@ public partial class KioskStoreList
 
     public virtual ICollection<KioskMenuCategory> KioskMenuCategories { get; set; } = new List<KioskMenuCategory>();
 
-    public virtual ICollection<KioskMenuList> KioskMenuLists { get; set; } = new List<KioskMenuList>();
-
     public virtual ICollection<KioskOrder> KioskOrders { get; set; } = new List<KioskOrder>();
 
     public virtual KioskStoreType? StoreTypeNumberNavigation { get; set; }

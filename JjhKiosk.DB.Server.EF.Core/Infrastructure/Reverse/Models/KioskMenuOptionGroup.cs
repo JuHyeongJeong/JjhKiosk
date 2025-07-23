@@ -13,7 +13,7 @@ public partial class KioskMenuOptionGroup
 
     public uint? OptionTypeId { get; set; }
 
-    public virtual ICollection<KioskMenuOptionMember> KioskMenuOptionMembers { get; set; } = new List<KioskMenuOptionMember>();
+    public virtual ICollection<KioskMenuOptionLinker> KioskMenuOptionLinkers { get; set; } = new List<KioskMenuOptionLinker>();
 
     public virtual KioskMenuType? MenuType { get; set; }
 

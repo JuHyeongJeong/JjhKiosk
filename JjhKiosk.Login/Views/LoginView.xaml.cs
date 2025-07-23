@@ -15,10 +15,14 @@ using System.Windows.Shapes;
 
 namespace JjhKiosk.Login.Views
 {
+    public interface ILoginView
+    {
+
+    }
     /// <summary>
     /// Interaction logic for ViewA.xaml
     /// </summary>
-    public partial class LoginView : UserControl
+    public partial class LoginView : UserControl, ILoginView
     {
         public LoginView()
         {

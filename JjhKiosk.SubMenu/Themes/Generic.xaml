@@ -1,0 +1,8 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:JjhKiosk.SubMenu">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="JjhKiosk.SubMenu;component/Themes/Views/SubMenuView.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

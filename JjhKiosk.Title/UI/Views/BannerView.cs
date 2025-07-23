@@ -16,7 +16,8 @@ using System.Windows.Shapes;
 
 namespace JjhKiosk.Title.UI.Views
 {
-    public class BannerView : ContentControlBase
+    public interface IBannerView { }
+    public class BannerView : ContentControlBase, IBannerView
     {
         static BannerView()
         {

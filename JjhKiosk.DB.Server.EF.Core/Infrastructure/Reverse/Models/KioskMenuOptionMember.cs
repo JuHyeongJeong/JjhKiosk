@@ -11,7 +11,5 @@ public partial class KioskMenuOptionMember
 
     public uint OptionMemberPrice { get; set; }
 
-    public uint OptionGroupId { get; set; }
-
-    public virtual KioskMenuOptionGroup OptionGroup { get; set; } = null!;
+    public virtual ICollection<KioskMenuOptionLinker> KioskMenuOptionLinkers { get; set; } = new List<KioskMenuOptionLinker>();
 }

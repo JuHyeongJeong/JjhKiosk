@@ -6,5 +6,18 @@
         <ResourceDictionary Source="JjhKiosk.Support;component/Themes/Controls/MenuListBox.xaml"/>
         <ResourceDictionary Source="JjhKiosk.Support;component/Themes/Controls/MenuListBoxItem.xaml"/>
         <ResourceDictionary Source="JjhKiosk.Support;component/Themes/Controls/StandbyButton.xaml"/>
+        <ResourceDictionary Source="JjhKiosk.Support;component/Themes/Controls/NextButton.xaml"/>
+        <ResourceDictionary Source="JjhKiosk.Support;component/Themes/Controls/CategoryListBox.xaml"/>
+        <ResourceDictionary Source="JjhKiosk.Support;component/Themes/Controls/CategoryListBoxItem.xaml"/>
+        <ResourceDictionary Source="JjhKiosk.Support;component/Themes/Controls/SubItemListBox.xaml"/>
+        <ResourceDictionary Source="JjhKiosk.Support;component/Themes/Controls/SubItemListBoxItem.xaml"/>
+        <ResourceDictionary Source="JjhKiosk.Support;component/Themes/Controls/SubItemOptionListBox_MaxOne.xaml"/>
+        <ResourceDictionary Source="JjhKiosk.Support;component/Themes/Controls/SubItemOptionListBox_Multi.xaml"/>
+        <ResourceDictionary Source="JjhKiosk.Support;component/Themes/Controls/SubItemOptionListBox_MultiAdd.xaml"/>
+        <ResourceDictionary Source="JjhKiosk.Support;component/Themes/Controls/SubItemOptionListBox_OnlyOne.xaml"/>
+        <!--<ResourceDictionary Source="JjhKiosk.Support;component/Themes/Controls/SubItemOptionListBoxItem_OnlyOne.xaml"/>
+        <ResourceDictionary Source="JjhKiosk.Support;component/Themes/Controls/SubItemOptionListBoxItem_MultiAdd.xaml"/>-->
+        <ResourceDictionary Source="JjhKiosk.Support;component/Themes/Controls/OptionCancelButton.xaml"/>
+        <ResourceDictionary Source="JjhKiosk.Support;component/Themes/Controls/OptionSelectButton.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
