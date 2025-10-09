@@ -1,6 +1,7 @@
 # JJHKiosk 소개
 
-해당 프로젝트는 Prism 프레임워크를 사용하여 WPF 설계를 디자인하고, EFCore를 사용해 MySQL과 연동하여
+해당 프로젝트는 Prism 프레임워크를 사용하여 WPF 설계를 디자인하고, EFCore를 사용해 MariaDB와 연동하여
+
 각종 데이터 및 이미지를 불러와 KIOSK앱에 적용하여 작동하게 하는 앱을 제작하는 프로젝트입니다.
 
 ------
@@ -33,8 +34,24 @@
 ------
 
 ## 프로젝트 설명
+
+### DB설계
+
 ![DB ERD 이미지](https://github.com/JuHyeongJeong/JjhKiosk/blob/main/ERD.png)
-MySQL에 구성할 DB의 설계도입니다.
+
+MariaDB에 구성할 DB의 설계도입니다.
+
 기본적으로 로그인할 ID와 해당 ID에 연계된 StoreID를 할당하고
+
 Store의 정보를 담당하는 테이블과 그에 종속된 메뉴그리고 메뉴에 종속된 옵션등등의 데이터를 구성하였습니다.
-### 
+
+### 실제DB 구현
+![실제 구성한 DB](https://github.com/JuHyeongJeong/JjhKiosk/blob/main/DBImage.png)
+
+DB 설계와 거의 동일하게 MariaDB에 테이블과 컬럼을 작성하였습니다.
+
+### DB의 위치
+![DB 설치 장비](https://github.com/JuHyeongJeong/JjhKiosk/blob/main/SynologyDBServer.png)
+
+DB는 같은 컴퓨터가 아닌 같은 네트워크 내에 있는 NAS서버에 설치하여 내부 IP의 포트를 열어 연결하여 사용하였습니다.
+
