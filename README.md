@@ -75,6 +75,9 @@ DB는 같은 컴퓨터가 아닌 같은 네트워크 내에 있는 NAS서버에 
 
 로그인화면입니다. 해당 화면에서 DB의 Kiosk_Account 테이블에 저장되어있는 아이디와 비밀번호를 입력해야 합니다.
 
+
+
+
 ![로그인 정보 DB](https://github.com/JuHyeongJeong/JjhKiosk/blob/main/mdImages/1_1.png)
 
 이때 비밀번호는 해쉬값으로 변환되어 저장되어있으므로 DB를 본다고 값을 알수는 없습니다.
@@ -84,9 +87,15 @@ DB는 같은 컴퓨터가 아닌 같은 네트워크 내에 있는 NAS서버에 
 여기서 변경 후 DB에 저장하면 됩니다.
 
 
+
+
+
 ![포장_테이크아웃선택](https://github.com/JuHyeongJeong/JjhKiosk/blob/main/mdImages/2.png)
 
 음료를 홀에서 마실지 가져갈지 선택하는 화면입니다.
+
+
+
 
 
 ![메뉴화면](https://github.com/JuHyeongJeong/JjhKiosk/blob/main/mdImages/3.png)
@@ -100,9 +109,17 @@ DB는 같은 컴퓨터가 아닌 같은 네트워크 내에 있는 NAS서버에 
 메뉴별로 DB에 이미지 위치가 저장되어있고, 프로젝트중 Resource를 담당하는 프로젝트에서 위치를 찾아 이미지를 띄워줍니다.
 
 
+
+
+
+
 ![상단 배너 애니메이션](https://github.com/user-attachments/assets/b5d56746-9bd8-48ce-9544-d047e4f39ff8)
 
 상단 배너는 3초마다 다른이미지로 넘어갑니다. 우측에서 좌측으로 이동하며, 3개의 이미지를 반복해서 보여줍니다.
+해당이미지가 움직이지 않는다면 이미지를 클릭해주세요.
+
+
+
 
 
 ![옵션 화면](https://github.com/JuHyeongJeong/JjhKiosk/blob/main/mdImages/4.png)
