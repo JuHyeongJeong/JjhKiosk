@@ -135,6 +135,9 @@ DB는 같은 컴퓨터가 아닌 같은 네트워크 내에 있는 NAS서버에 
 - 프로젝트 구성에 필요하진 않지만 유용하게 사용할 수 있는 유틸리티 프로젝트 저장 경로
 
 
+------
+
+
 *** 그리고 각 프로젝트는 다음과 같은 기능을 담당합니다.
 
 ### LIB
@@ -144,19 +147,57 @@ DB는 같은 컴퓨터가 아닌 같은 네트워크 내에 있는 NAS서버에 
 
 ### UI
 
-1. JjhKiosk : 중심이되는 메인 프로젝트. Config를 담당하는 Json파일과, 모든 모델, View, ViewModel을 DI 컨테이너에 등록합니다. 그리고 View와 ViewModel의 DataContext의 관계를 연결하고, 공동으로 사용하는 Color나 Size등의 Resource값을 모든 프로젝트에서 공통으로 사용할 수 있도록 등록하여 관리합니다. 프로그램의 시작점으로 메인 윈도우를 띄웁니다.
-2. JjhKiosk.Login : 로그인 화면 디자인입니다. 로그인에 성공하면 JjhKiosk.Standby(홀/테이크아웃선택)화면으로 넘어갑니다.
-3. JjhKiosk.MainWindow : 메인 윈도우입니다. 내용에는 Region 하나밖에없습니다. Prism은 Region영역을 설정하여 여러 View를 불러와 Region에 붙일 수 있습니다.
-4. JjhKiosk.Menu : JjhKiosk.Standby화면에서 홀이나 포장을 선택 시 넘어가는 화면입니다. 4개의 Region으로 구성되어있으며, 최상단에 배너, 아래에 메뉴 카테고리, 그아래에 음식 메뉴 선택, 그리고 음식메뉴를 선택하면 나타나는 옵션 선택 팝업화면으로 되어있습니다.
-5. JjhKiosk.MenuCategory : JjhKiosk.Menu에서 메뉴의 카테고리(커피, 디저트, 차 등등)의 리스트를 DB에서 불러내어 나타냅니다. 카테고리를 선택하면 Prism의 기능으로 MenuList를 변경하도록 JjhKiosk.MenuList프로젝트에 이벤트가 발생합니다.
-6. JjhKiosk.MenuList : JjhKiosk.MenuCategory에서 선택한 메뉴에 따라 DB에서 카테고리에 해당하는 모든 메뉴를 불러와 리스트에 이미지와 함께 나타냅니다. 메뉴를 클릭하면 JjhKiosk.Menu화면에서 팝업을 띄워 옵션선택 화면을 볼 수 있게 합니다.
+1. JjhKiosk : 중심이되는 메인 프로젝트. Config를 담당하는 Json파일과, 모든 모델, View, ViewModel을 DI 컨테이너에 등록합니다.
+  
+   그리고 View와 ViewModel의 DataContext의 관계를 연결하고, 공동으로 사용하는 Color나 Size등의 Resource값을 모든
+
+   프로젝트에서 공통으로 사용할 수 있도록 등록하여 관리합니다. 프로그램의 시작점으로 메인 윈도우를 띄웁니다.
+
+   
+2. JjhKiosk.Login : 로그인 화면 디자인입니다.
+
+   로그인에 성공하면 JjhKiosk.Standby(홀/테이크아웃선택)화면으로 넘어갑니다.
+
+   
+3. JjhKiosk.MainWindow : 메인 윈도우입니다. 내용에는 Region 하나밖에없습니다.
+
+   Prism은 Region영역을 설정하여 여러 View를 불러와 Region에 붙일 수 있습니다.
+
+   
+4. JjhKiosk.Menu : JjhKiosk.Standby화면에서 홀이나 포장을 선택 시 넘어가는 화면입니다.
+
+   4개의 Region으로 구성되어있으며, 최상단에 배너, 아래에 메뉴 카테고리, 그아래에 음식 메뉴 선택,
+
+   그리고 음식메뉴를 선택하면 나타나는 옵션 선택 팝업화면으로 되어있습니다.
+
+   
+5. JjhKiosk.MenuCategory : JjhKiosk.Menu에서 메뉴의 카테고리(커피, 디저트, 차 등등)의 리스트를 DB에서 불러내어 나타냅니다.
+  
+   카테고리를 선택하면 Prism의 기능으로 MenuList를 변경하도록 JjhKiosk.MenuList프로젝트에 이벤트가 발생합니다.
+
+   
+6. JjhKiosk.MenuList : JjhKiosk.MenuCategory에서 선택한 메뉴에 따라 DB에서 카테고리에 해당하는 모든 메뉴를 불러와 리스트에 이미지와 함께 나타냅니다.
+
+   메뉴를 클릭하면 JjhKiosk.Menu화면에서 팝업을 띄워 옵션선택 화면을 볼 수 있게 합니다.
+
+   
 7. JjhKiosk.Resource : 프로젝트내에서 사용하는 모든 이미지 리소스를 저장하고있습니다.
+
+   
 8. JjhKiosk.Standby : 로그인 이후 홀/포장 선택을 요구하는 화면입니다.
+
+   
 9. JjhKiosk.SubMenu : 메뉴리스트에서 메뉴를 선택한 후 나타나는 팝업화면의 디자인을 담당합니다.
-10. JjhKiosk.Support : 프로젝트에서 사용하는 CustomControl의 모든 디자인과 기능들, 그리고 이벤트와 컨버터, 인터페이스, 모델 등의 필수요소들을 종합하여 관리하는 프로젝트입니다.
+
+    
+10. JjhKiosk.Support : 프로젝트에서 사용하는 CustomControl의 모든 디자인과 기능들, 그리고 이벤트와 컨버터,
+
+    인터페이스, 모델 등의 필수요소들을 종합하여 관리하는 프로젝트입니다.
+    
 11. JjhKiosk.Title : 메뉴 화면 최상단의 움직이는 배너 디자인을 담당하는 프로젝트입니다.
 
 
 ### Utility
+
 1. PasswordHashGenerator : 비밀번호를 해쉬변환하기위한 유틸리티 프로그램입니다.
 
