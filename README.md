@@ -100,8 +100,7 @@ DB는 같은 컴퓨터가 아닌 같은 네트워크 내에 있는 NAS서버에 
 메뉴별로 DB에 이미지 위치가 저장되어있고, 프로젝트중 Resource를 담당하는 프로젝트에서 위치를 찾아 이미지를 띄워줍니다.
 
 
-![상단 배너 애니메이션](https://github.com/JuHyeongJeong/JjhKiosk/blob/main/mdImages/3gif.gif)
-
+![상단 배너 애니메이션](https://github.com/user-attachments/assets/b5d56746-9bd8-48ce-9544-d047e4f39ff8)
 상단 배너는 3초마다 다른이미지로 넘어갑니다. 우측에서 좌측으로 이동하며, 3개의 이미지를 반복해서 보여줍니다.
 
 
