@@ -13,6 +13,7 @@
 - EntityFrameworkCore(v8.0.10)
 - Prism(9.0.537)
 - CommunityToolkit.Mvvm(8.3.2)
+- MariaDB(개인용 NAS서버에 설치)
 
 ------
 
