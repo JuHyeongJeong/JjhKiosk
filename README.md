@@ -29,7 +29,7 @@
 
 1. GitHub에서 파일을 다운로드 또는 Clone.
 2. dump-JJH_KioskDB-202510091809.sql 파일을 mysql에 Restore합니다. (해당 파일은 DBeaver에서 백업한 파일이므로 되도록 DBeaver에서 Restore해주시기 바랍니다.)
-3. ![DB설정](https://github.com/JuHyeongJeong/JjhKiosk/blob/main/mdImages/5.png)
+3. ![DB설정](https://github.com/JuHyeongJeong/JjhKiosk/blob/main/mdImages/5_1.png)
 
    프로젝트 중 JjhKiosk 프로젝트 내에 appsettings.json 파일을 수정해야합니다. 표시된 내용중 설치한 DB 환경에 맞게 변경해주세요.
 4. 앱 실행
