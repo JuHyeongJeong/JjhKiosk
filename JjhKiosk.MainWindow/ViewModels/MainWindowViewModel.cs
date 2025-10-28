@@ -21,5 +21,10 @@ namespace JjhKiosk.MainWindow.ViewModels
             //    System.Diagnostics.Debug.WriteLine($"View found in region: {view.GetType().Name}");
             //}
         }
+
+        public MainWindowViewModel()
+        {
+            
+        }
     }
 }
